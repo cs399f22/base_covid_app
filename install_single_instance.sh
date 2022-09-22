@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 amazon-linux-extras install -y redis6
 systemctl enable redis
 systemctl start redis
