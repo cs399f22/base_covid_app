@@ -1,0 +1,10 @@
+[Unit]
+Description=Launch the collector for the Base COVID App
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/base_covid_app/server/.venv/bin/python /base_covid_app/collector/collector.py
+
+[Install]
+WantedBy=multi-user.target
